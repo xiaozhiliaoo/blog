@@ -30,6 +30,12 @@ _config.yaml
 
 站点主题配置在theme: next
 
+
+## 安装主题
+
+在themes下git clone主题源码即可，需要删除.git目录，否则提交不到blog仓库。然后在[_config.yml](_config.yml) 配置主题名字，也就是目录的名字
+
+
 ## 主题的配置
 
 在themes下主题的_config.yaml里面
