@@ -1,6 +1,6 @@
 # blog
 
-我的博客源码
+我的博客源码，博客访问地址：[https://xiaozhiliaoo.github.io/](https://xiaozhiliaoo.github.io/)
 
 ## 部署
 
@@ -9,7 +9,7 @@
 3. 启动，hexo clean & hexo g & hexo s，可见脚本：start.sh。
 4. 部署，hexo clean & hexo g & hexo d，可见脚步：deploy.sh。
 
-hexo d 部署到了https://github.com/xiaozhiliaoo/xiaozhiliaoo.github.io这个项目
+hexo d 部署到了[https://github.com/xiaozhiliaoo/xiaozhiliaoo.github.io](https://github.com/xiaozhiliaoo/xiaozhiliaoo.github.io) 这个项目
 
 ## 目录说明
 
