@@ -11,6 +11,8 @@
 
 hexo d 部署到了[https://github.com/xiaozhiliaoo/xiaozhiliaoo.github.io](https://github.com/xiaozhiliaoo/xiaozhiliaoo.github.io) 这个项目
 
+5. 部署完之后提交到blog仓库即可。
+
 ## 目录说明
 
 整个站点的目录：[source](source)
