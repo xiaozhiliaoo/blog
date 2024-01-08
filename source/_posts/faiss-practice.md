@@ -15,19 +15,30 @@ categories:
 
 官方介绍: Faiss是一个用于高效相似性搜索和密集向量聚类的库。也就是用来实现高效的向量检索。
 
+Faiss主要组件包括：
+
+1. 索引结构： **IVF**(Inverted File)、**IVFPQ**(Inverted File with Product Quantization)、**HNSW**(Hierarchical Navigable Small World)
+2. 向量编码：**PQ**(Product Quantization)、**OPQ**(Optimized Product Quantization)。编码可以将高维向量映射到低维空间中，同时保持距离的相似性。
+3. 相似性度量：欧氏距离、内积、Jaccard 相似度等。
+
 Faiss的核心API有：
 
-**IndexFactory(d int, description string, metric int)**：用来创建索引，通过维度，索引方法描述，相似性度量来创建索引。
+1. **IndexFactory(d int, description string, metric int)**：用来创建索引，通过维度，索引方法描述，相似性度量来创建索引。
+2. **Ntotal()** 索引向量的数量。
+3. **Train(x []float32)**  用一组具有代表性的向量训练索引。
 
-**Ntotal()** 索引向量的数量。
+4. **Add(x []float32)**，用于创建向量检索集。
 
-**Train(x []float32)**  用一组具有代表性的向量训练索引。
-
-**Add(x []float32)**，用于创建向量检索集。
-
-**Search(x []float32, k int64) (distances []float32, labels []int64, err error)**，x向量在k紧邻进行检索，返回每个查询向量的 k 个最近邻的 ID 以及相应的距离。
+5. **Search(x []float32, k int64) (distances []float32, labels []int64, err error)**，x向量在k紧邻进行检索，返回每个查询向量的 k 个最近邻的 ID 以及相应的距离。
 
 如何理解**Add**和**Search**方法呢？**Add**是添加向量，**Search**从向量中检索。比如一篇文章拆分成5个片段，此时调用Add方法生成了5个向量，查询的内容会生成一个查询向量，那么**Search**中**k=2**会返回最近的两个近邻，也就是返回5个向量中的2个向量，那么返回值**distances**是查询向量到返回**2**个向量的距离，返回值**labels**是返回的向量在5个片段中的位置，此时就可以知道返回了那些段。
+
+Faiss的主要流程是：
+
+1. 初始化索引结构，指定相似性度量方法(metric)和编码方法(description)。使用**IndexFactory**。
+2. 将原始向量数据添加到索引中。使用**Add**。
+3. 对查询向量进行编码，并在索引中搜索与查询向量相似的向量。使用**Search**。
+4. 获取搜索结果，并根据需要进行后处理。
 
 # 文档向量化检索设计
 
