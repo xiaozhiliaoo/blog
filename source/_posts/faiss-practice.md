@@ -17,8 +17,8 @@ categories:
 
 Faiss主要组件包括：
 
-1. 索引结构： **IVF**(Inverted File)、**IVFPQ**(Inverted File with Product Quantization)、**HNSW**(Hierarchical Navigable Small World)
-2. 向量编码：**PQ**(Product Quantization)、**OPQ**(Optimized Product Quantization)。编码可以将高维向量映射到低维空间中，同时保持距离的相似性。
+1. 索引结构：**Flat**（暴力搜索) 、**IVF**(Inverted File)、**IVFPQ**(Inverted File with Product Quantization)、**HNSW**(Hierarchical Navigable Small World)，索引结构可以加速相似性搜索，降低查询时间。
+2. 向量编码：**PQ**(Product Quantization)、**OPQ**(Optimized Product Quantization)。编码可以将高维向量映射到低维空间中，同时保持距离的相似性，有助于减少内存占用和计算量。
 3. 相似性度量：欧氏距离、内积、Jaccard 相似度等。
 
 Faiss的核心API有：
