@@ -25,13 +25,17 @@ categories:
 
 # 解决方法
 
-性能优化是把es的terms-aggregation改成composite aggregation。
-**terms**聚合：https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html
-**terms**聚合不精确问题(5.3有说明)：https://www.elastic.co/guide/en/elasticsearch/reference/5.3/search-aggregations-bucket-terms-aggregation.html#search-aggregations-bucket-terms-aggregation-approximate-counts
-**composite聚合**：https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-composite-aggregation.html
-**multi-terms聚合**(7.15才有特性)：https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-multi-terms-aggregation.html
-参考⽂档：https://lvt4j.51vip.biz/confluence/pages/viewpage.action?pageId=1671223#heading-composite%E5%A4%8D%E5%90%88%E5%BC%8F%E6%A1%B6
-terms嵌套聚合改成composite的**缺点：相对嵌套式terms，缺乏的功能是⽆法执⾏中间层上的⼦聚合，需要再对中间层进⾏额外的聚合请求。所以会极⼤增加代码的编写**。
+性能优化是把es的terms-aggregation改成composite aggregation。terms嵌套聚合改成composite聚合的**缺点：相对嵌套式terms，缺乏的功能是⽆法执⾏中间层上的⼦聚合，需要再对中间层进⾏额外的聚合请求。所以会极⼤增加代码的编写**。
+
+**terms**聚合：[参考](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html)
+
+**terms**聚合不精确问题(5.3有说明)：[参考](https://www.elastic.co/guide/en/elasticsearch/reference/5.3/search-aggregations-bucket-terms-aggregation.html#search-aggregations-bucket-terms-aggregation-approximate-counts)
+
+**composite聚合**：[参考](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-composite-aggregation.html)
+
+**multi-terms聚合**(7.15才有特性)：[参考](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-multi-terms-aggregation.html)
+
+
 
 # 案例分析
 
