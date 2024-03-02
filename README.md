@@ -6,12 +6,14 @@
 
 1. 首先需要安装nodejs。
 2. 然后安装hexo，命令：npm install -g hexo-cli。
-3. 启动，hexo clean & hexo g & hexo s，可见脚本：start.sh。
-4. 部署，hexo clean & hexo g & hexo d，可见脚步：deploy.sh。
+3. 将项目全部克隆到某个文件夹下。
+4. 启动，hexo clean & hexo g & hexo s，可见脚本：start.sh。
+5. 部署，hexo clean & hexo g & hexo d，可见脚步：deploy.sh。
+6. 部署完之后将所有改动提交到blog仓库即可。执行 **sh up.push.git.sh**
 
-hexo d 部署到了[https://github.com/xiaozhiliaoo/xiaozhiliaoo.github.io](https://github.com/xiaozhiliaoo/xiaozhiliaoo.github.io) 这个项目
+hexo d 将生成后的博客源码部署到了[https://github.com/xiaozhiliaoo/xiaozhiliaoo.github.io](https://github.com/xiaozhiliaoo/xiaozhiliaoo.github.io) 这个项目。
 
-5. 部署完之后提交到blog仓库即可。
+博客访问地址：[https://xiaozhiliaoo.github.io/](https://xiaozhiliaoo.github.io/)
 
 ## 目录说明
 
