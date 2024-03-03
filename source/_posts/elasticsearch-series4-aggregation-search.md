@@ -1,5 +1,5 @@
 ---
-title: elasticsearch(4) - 常用聚合查询
+title: elasticsearch(4) - 常用Composite聚合查询
 date: 2021-08-30 23:25:06
 tags:
   - 聚合查询
@@ -10,7 +10,9 @@ categories:
   - elasticsearch
 ---
 
-# bool和nested查询（订单结算查询）
+es常见的聚合查询有composite，现在案例主要是composite聚合例子。
+
+# Bool和Nested查询（订单结算查询）
 
 ```json
 GET /order/_search
@@ -165,7 +167,7 @@ GET /order/_search?size=0
 
 
 
-# Compsite聚合和sum统计（支付摊期统计）
+# Compsite聚合和Sum统计（支付摊期统计）
 
 ```json
 GET /order/_search?size=0&request_cache=true
@@ -348,7 +350,7 @@ GET /order/_search?size=0&request_cache=true
 }
 ```
 
-# composite聚合（支付方式统计）
+# Composite聚合（支付方式统计）
 
 ```json
 GET /order/_search?size=0&request_cache=true
