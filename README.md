@@ -43,3 +43,7 @@ _config.yaml
 ## 主题的配置
 
 在themes下主题的_config.yaml里面
+
+## 说明
+
+themes下面next命名成next1，是因为next无法提交到github仓库，同时在_config.yaml里面需要进行修改。
