@@ -22,4 +22,4 @@ source/lib/Han/*
 !source/lib/Han/dist/
 
 
-public/images/*
+public/*
